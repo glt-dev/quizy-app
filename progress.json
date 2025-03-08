@@ -1,0 +1,21 @@
+{
+    "players": {
+        "JohnDoe": {
+            "score": 5,
+            "level": "Medium",
+            "correct_in_a_row": 3,
+            "incorrect_in_a_row": 1,
+            "questions": [
+                {
+                    "question": "How do you start a conversation with a nurse?",
+                    "user_answer": "Ask about their challenges.",
+                    "correct_answer": "Use empathy to build rapport.",
+                    "result": "Correct"
+                }
+            ]
+        },
+        "Gianluca": {
+            "score": 8
+        }
+    }
+}

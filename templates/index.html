@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Benvenuto nel quiz Badanti di Family+Happy</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Benvenuto nel Quiz!</h1>
+    <form method="POST">
+        <label for="player_name">Inserisci il tuo nome:</label>
+        <input type="text" id="player_name" name="player_name" required>
+
+        <label for="difficulty">Seleziona la difficoltà:</label>
+        <select id="difficulty" name="difficulty">
+            <option value="Facile">Facile</option>
+            <option value="Medio">Medio</option>
+            <option value="Difficile">Difficile</option>
+        </select>
+
+        <button type="submit">Inizia</button>
+    </form>
+</body>
+</html>

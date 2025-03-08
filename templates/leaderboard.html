@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classifica</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Classifica</h1>
+    <ul>
+        {% for player, data in leaderboard %}
+            <li>{{ player }}: {{ data["score"] }} punti</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/"><button>Torna al Quiz</button></a>
+</body>
+</html>

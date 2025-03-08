@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Giocatore: {{ player_name }}</h1>
+
+    <div class="question-box">
+        <p>{{ question }}</p>
+    </div>
+
+    <form method="POST">
+        <input type="hidden" name="question" value="{{ question }}">
+        <input type="hidden" name="option_A" value="{{ options['A'] }}">
+        <input type="hidden" name="option_B" value="{{ options['B'] }}">
+        <input type="hidden" name="option_C" value="{{ options['C'] }}">
+
+        <input type="hidden" name="difficulty" value="{{ difficulty }}">
+        <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+
+        <input type="radio" name="answer" value="A"> A) {{ options['A'] }}<br>
+        <input type="radio" name="answer" value="B"> B) {{ options['B'] }}<br>
+        <input type="radio" name="answer" value="C"> C) {{ options['C'] }}<br>
+
+        <button type="submit" class="submit-btn">Invia Risposta</button>
+    </form>
+
+    {% if message %}
+        <div class="result">
+            <p>{{ message }}</p>
+            <p>Punteggio totale: {{ points }}</p>
+        </div>
+    {% endif %}
+
+    <div class="buttons-container">
+        <a href="/quiz/{{ player_name }}"><button>Genera un'altra domanda</button></a>
+        <a href="/leaderboard"><button>Visualizza la Classifica</button></a>
+    </div>
+</body>
+</html>
