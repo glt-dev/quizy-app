@@ -34,9 +34,11 @@
         </div>
     {% endif %}
 
-    <div class="buttons-container">
-        <a href="/quiz/{{ player_name }}"><button>Genera un'altra domanda</button></a>
-        <a href="/leaderboard"><button>Visualizza la Classifica</button></a>
-    </div>
+<div class="buttons-container">
+    <a href="{{ url_for('quiz', player_name=player_name, difficulty=difficulty) }}">
+        <button>Genera un'altra domanda</button>
+    </a>
+    <a href="/leaderboard"><button>Visualizza la Classifica</button></a>
+</div>
 </body>
 </html>
